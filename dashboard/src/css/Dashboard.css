@@ -1,0 +1,90 @@
+/* Dashboard.css */
+
+.dashboard {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.gesture-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.gesture-info span {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.camera-view {
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.camera-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-btn,
+.stop-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.start-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #059669;
+}
+
+.stop-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.stop-btn:hover {
+  background-color: #dc2626;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Optional: smoother responsiveness */
+@media (max-width: 600px) {
+  .camera-view {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,56 @@
+/* ControlCard.css */
+
+.control-card {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    transition: transform 0.2s ease;
+  }
+  
+  .control-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .control-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: #1f2937;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 1.4rem;
+  }
+  
+  .skyblue { color: skyblue; }
+  .yellow { color: goldenrod; }
+  .purple { color: purple; }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .status.on {
+    color: green;
+  }
+  
+  .status.off {
+    color: red;
+  }
+  
+  .led-color.red {
+    color: red;
+  }
+  
+  .led-color.green {
+    color: green;
+  }
+  
+  .led-color.yellow {
+    color: goldenrod;
+  }
+  
