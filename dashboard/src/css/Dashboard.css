@@ -5,26 +5,30 @@
   padding: 2rem;
   max-width: 1000px;
   margin: auto;
-  background: #f9fafb;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #c3ecf3, #e5d0ff);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.dashboard h1 {
+.dashboard-title {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #222;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .gesture-info {
   text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
-.gesture-info span {
+.gesture-detected {
   font-weight: bold;
-  color: #2563eb;
+  color: #7c3aed;
 }
 
 .camera-section {
@@ -35,9 +39,10 @@
 }
 
 .camera-view {
-  border-radius: 12px;
-  border: 2px solid #ccc;
+  border-radius: 16px;
+  border: 3px solid #7c3aed;
   margin-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.3);
 }
 
 .camera-buttons {
@@ -45,33 +50,29 @@
   gap: 1rem;
 }
 
-.start-btn,
-.stop-btn {
-  padding: 0.6rem 1.2rem;
+.colorful-btn {
+  padding: 0.7rem 1.4rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.start-btn {
-  background-color: #10b981;
+  background: linear-gradient(to right, #10b981, #34d399);
   color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.start-btn:hover {
-  background-color: #059669;
+.colorful-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.4);
 }
 
 .stop-btn {
-  background-color: #ef4444;
-  color: white;
+  background: linear-gradient(to right, #f43f5e, #f87171);
 }
 
 .stop-btn:hover {
-  background-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.4);
 }
 
 .controls {
@@ -81,10 +82,39 @@
   margin-top: 2rem;
 }
 
-/* Optional: smoother responsiveness */
+.control-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.control-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual card accent borders */
+.led-card {
+  border-left: 5px solid #facc15;
+}
+
+.fan-card {
+  border-left: 5px solid #38bdf8;
+}
+
+.speaker-card {
+  border-left: 5px solid #a78bfa;
+}
+
+/* Responsive enhancements */
 @media (max-width: 600px) {
   .camera-view {
     width: 100%;
     height: auto;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
   }
 }
