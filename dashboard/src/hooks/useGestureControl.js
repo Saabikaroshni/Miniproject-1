@@ -95,4 +95,4 @@ function detectSwipe(positions, onGestureDetected) {
       onGestureDetected([{ label: 'swipe-left' }]);
     }
   }
-}
+} 
